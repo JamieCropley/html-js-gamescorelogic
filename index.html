@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Game Score</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<button onclick="btn1function()">Increase</button>
+<button onclick="btn2function()">Decrease</button>
+<p id="score"></p>
+
+
+<script>
+    let scoreVar = 0;
+
+    const btn1function = () => {
+        scoreVar++;
+
+        document.getElementById("score").innerHTML = "Score: " + scoreVar;
+        console.log("Score: " + scoreVar);
+
+        if (scoreVar >= 0) {
+            document.getElementById("score").innerHTML = "Score: " + scoreVar;
+            console.log("Score: " + scoreVar);
+        }
+        if (scoreVar <= -1)
+        {
+            document.getElementById("score").innerHTML = "Game Over";
+            scoreVar = 0;
+            console.log("Score: " + scoreVar);
+        }
+
+    };
+
+    const btn2function = () => {
+        scoreVar--;
+
+        document.getElementById("score").innerHTML = "Score: " + scoreVar;
+        console.log("Score: " + scoreVar);
+
+        if (scoreVar >= 0) {
+            document.getElementById("score").innerHTML = "Score: " + scoreVar;
+            console.log("Score: " + scoreVar);
+        }
+        if (scoreVar <= -1)
+        {
+            document.getElementById("score").innerHTML = "Game Over";
+            scoreVar = 0;
+            console.log("Score: " + scoreVar);
+        }
+
+
+    };
+
+</script>
+
+
+
+
+</body>
+</html>
